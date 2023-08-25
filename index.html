@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo index</title>
+    <style>
+        #div_pai {
+            color: white;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            flex-direction: column;
+            margin-right: 200px;
+            margin-top: 200px;
+            font-size: 150px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        #div1 {
+            background-color: rgb(48, 192, 48);
+            height: 200px;
+            width: 200px;
+            text-align: center;
+            line-height: 200px;
+            border: 7px solid black;
+            border-radius: 50%;
+        }
+
+        #div2 {
+            background-color:crimson;
+            height: 200px;
+            width: 200px;
+            text-align: center;
+            line-height: 200px;
+            border: 7px solid black;
+            border-radius: 50%;
+            
+        }
+
+        #div3 {
+            background-color: rgb(83, 36, 211);
+            height: 200px;
+            width: 200px;
+            text-align: center;
+            line-height: 200px;
+            border: 7px solid black;
+            border-radius: 50%;
+        }
+
+        #botao_ordem {
+            margin-left: 600px;
+            height: 100px;
+            width: 250px;
+            border-radius: 50px;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #botao_ordem2 {
+            margin-left: 600px;
+            height: 100px;
+            width: 250px;
+            border-radius: 50px;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            visibility: hidden;
+        }
+
+        
+
+        
+    
+        
+    </style>
+</head>
+<body>
+    
+    <div id="div_pai">
+        <div id="div1">
+            1
+        </div>
+
+        <div id="div2">
+            2
+        </div>
+
+        <div id="div3">
+            3
+        </div>
+
+        <button id="botao_ordem" onclick="mudar_ordem()"> inverter ordem <br>
+        dos números </button>
+
+        <button id="botao_ordem2" onclick="voltar_normal()"> voltar ao normal </button>
+
+    
+
+    </div>  
+
+
+    <script>
+        function mudar_ordem() {
+            var botao = document.getElementById("botao_ordem")
+            var div1 = document.getElementById("div1")
+            var div2 = document.getElementById("div2")
+            var div3 = document.getElementById("div3")
+            var botao_reset = document.getElementById("botao_ordem2")
+            botao_reset.style.visibility = "visible"
+            div1.innerHTML = "3"
+            div2.innerHTML = "2"
+            div3.innerHTML = "1"
+        }
+
+
+        function voltar_normal() {
+            var botao = document.getElementById("botao_ordem")
+            var div1 = document.getElementById("div1")
+            var div2 = document.getElementById("div2")
+            var div3 = document.getElementById("div3")
+            var botao_reset = document.getElementById("botao_ordem2")
+            botao_reset.style.visibility = "hidden"
+            div1.innerHTML = "1"
+            div2.innerHTML = "2"
+            div3.innerHTML = "3"
+
+        }
+    </script>
+
+
+
+</body>
+</html>
